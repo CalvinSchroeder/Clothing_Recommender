@@ -95,7 +95,7 @@ else:
 
 ### Outputting the outfit and weather summary ###
 def send_recommendation(HatOpt, Coat, Top, Bottoms, Shoes, maxTemp, minTemp, sumPrecip, maxWinds):
-    topic = 'Daily_Outfit_Recs'  # Use your unique name here
+    topic = 'OutfitsOutfitsOutfits'  # Use your unique name here
     message = 'Today\'s Recommended Outfit:\n' + f'Hat: {HatOpt}\n' + f'Coat: {Coat}\n' + f'Top: {Top}\n' + f'Bottoms: {Bottoms}\n' + f'Shoes: {Shoes}\n\n' + 'Weather Summary for the Next 24 Hours:\n' + f'Max Temperature: {maxTemp}°F\n' + f'Min Temperature: {minTemp}°F\n' + f'Precipitation Probability: {sumPrecip}%\n' + f'Max Wind Speed: {maxWinds} mph'
     
     requests.post(f"https://ntfy.sh/{topic}",
@@ -107,3 +107,4 @@ def send_recommendation(HatOpt, Coat, Top, Bottoms, Shoes, maxTemp, minTemp, sum
                   })
 
 send_recommendation(HatOpt, Coat, Top, Bottoms, Shoes, maxTemp, minTemp, sumPrecip, maxWinds)
+
